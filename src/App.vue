@@ -10,5 +10,5 @@ export default {
   components:{ Login }
 }
 </script>
-<style>
+<style src="./style.css">
 </style>
