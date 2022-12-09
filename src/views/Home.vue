@@ -13,6 +13,9 @@
       </ion-toolbar>
     </ion-header>
     <ion-content class="ion-padding">
+      <ion-fab-button>
+        <ion-icon :icon="getIcon('addOutline')"/>
+      </ion-fab-button>
     </ion-content>
   </ion-page>
 </template>

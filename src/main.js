@@ -5,7 +5,7 @@ import store from './store'
 import {
   IonApp, IonPage, IonHeader, IonToolbar, IonTitle, IonContent,
   IonicVue, IonRouterOutlet, IonCol, IonLabel, IonInput,
-  IonButton, IonItem, IonButtons, IonIcon
+  IonButton, IonItem, IonButtons, IonIcon, IonFabButton
 } from '@ionic/vue';
 import '@ionic/core/css/ionic.bundle.css'
 
@@ -27,6 +27,7 @@ app.component("IonButton", IonButton)
 app.component("IonItem", IonItem)
 app.component("IonButtons", IonButtons)
 app.component("IonIcon", IonIcon)
+app.component("IonFabButton", IonFabButton)
 
 app.mount('#app');
 
