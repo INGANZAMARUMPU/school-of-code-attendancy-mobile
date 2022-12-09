@@ -3,10 +3,13 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import {
-  IonApp, IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonicVue,
-  IonRouterOutlet, IonCol, IonLabel, IonInput, IonButton, IonItem
+  IonApp, IonPage, IonHeader, IonToolbar, IonTitle, IonContent,
+  IonicVue, IonRouterOutlet, IonCol, IonLabel, IonInput,
+  IonButton, IonItem, IonButtons, IonIcon
 } from '@ionic/vue';
 import '@ionic/core/css/ionic.bundle.css'
+
+import * as allIcons from "ionicons/icons";
 
 const app = createApp(App).use(IonicVue).use(router).use(store);
 
@@ -22,5 +25,15 @@ app.component("IonLabel", IonLabel)
 app.component("IonInput", IonInput)
 app.component("IonButton", IonButton)
 app.component("IonItem", IonItem)
+app.component("IonButtons", IonButtons)
+app.component("IonIcon", IonIcon)
 
 app.mount('#app');
+
+app.mixin({
+  methods: {
+    getIcon(name) {
+      return allIcons[name];
+    }
+  }
+})
