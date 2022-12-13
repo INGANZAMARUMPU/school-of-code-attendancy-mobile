@@ -46,6 +46,12 @@ export default {
       this.$emit("ugara")
     },
     creerNiveau(){
+      let niveau = {
+        nom: this.nom,
+        poids: this.poids
+      }
+      this.$store.state.niveaux.push(niveau)
+      this.close()
     }
   }
 }
