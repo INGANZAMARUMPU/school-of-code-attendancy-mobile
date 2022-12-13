@@ -5,7 +5,8 @@ import store from './store'
 import {
   IonApp, IonPage, IonHeader, IonToolbar, IonTitle, IonContent,
   IonicVue, IonRouterOutlet, IonCol, IonLabel, IonInput,
-  IonButton, IonItem, IonButtons, IonIcon, IonFabButton
+  IonButton, IonItem, IonButtons, IonIcon, IonFabButton, IonList,
+  IonSelect, IonSelectOption, IonPopover
 } from '@ionic/vue';
 import '@ionic/core/css/ionic.bundle.css'
 
@@ -28,6 +29,10 @@ app.component("IonItem", IonItem)
 app.component("IonButtons", IonButtons)
 app.component("IonIcon", IonIcon)
 app.component("IonFabButton", IonFabButton)
+app.component("IonList", IonList)
+app.component("IonSelect", IonSelect)
+app.component("IonSelectOption", IonSelectOption)
+app.component("IonPopover", IonPopover)
 
 app.mount('#app');
 
