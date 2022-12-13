@@ -31,15 +31,24 @@
         <ion-icon :icon="getIcon('addOutline')"/>
       </ion-fab-button>
     </ion-content>
+    <FormNiveau
+      :active="niveaux_shown"
+      @ugara="niveaux_shown=false"/>
   </ion-page>
 </template>
 
 <script>
-
+import FormNiveau from "../components/niveau"
 export default {
+  components: { FormNiveau },
+  data(){
+    return {
+      niveaux_shown:false
+    }
+  },
   methods:{
     addNiveau(){
-      alert("Not yet implemented")
+      this.niveaux_shown = true
     },
     logOut(){
       this.$store.state.user = null
