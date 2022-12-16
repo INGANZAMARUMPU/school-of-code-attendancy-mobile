@@ -27,6 +27,9 @@
       </ion-popover>
     </ion-header>
     <ion-content class="ion-padding">
+      <Employee
+        v-for="employee in employees"
+        :item="employee"/>
       <ion-fab-button routerLink="/form-employee">
         <ion-icon :icon="getIcon('addOutline')"/>
       </ion-fab-button>
@@ -39,11 +42,24 @@
 
 <script>
 import FormNiveau from "../components/niveau"
+import Employee from "../components/employee"
+
 export default {
-  components: { FormNiveau },
+  components: { FormNiveau, Employee },
   data(){
     return {
-      niveaux_shown:false
+      niveaux_shown:false,
+      employees:[
+        {
+          "nom": "NKURUNZIZA",
+          "prenom": "Jonathan",
+          "matricule": "96",
+          "niveau": {
+              "nom": "BAC III",
+              "poid": 10
+          }
+        }
+      ]
     }
   },
   methods:{

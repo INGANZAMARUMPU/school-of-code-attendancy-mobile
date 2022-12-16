@@ -67,8 +67,11 @@ export default {
 .body{
   position: relative;
   width: 60%;
+  max-width: 400px;
   background-color: white;
-  margin: 30% auto;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .items{
   padding: 0 10px 10px 10px;
