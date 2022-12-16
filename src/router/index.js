@@ -5,7 +5,7 @@ import FormEmployee from '../views/FormEmployee.vue'
 
 const routes = [
   { path: '/', name: 'Home', component: Home},
-  { path: '/presences', name: 'Presence', component: Presence},
+  { path: '/presences/:nom', name: 'Presence', component: Presence},
   { path: '/form-employee', name: 'FormEmployee', component: FormEmployee},
 ]
 

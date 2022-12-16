@@ -6,7 +6,7 @@ import {
   IonApp, IonPage, IonHeader, IonToolbar, IonTitle, IonContent,
   IonicVue, IonRouterOutlet, IonCol, IonLabel, IonInput,
   IonButton, IonItem, IonButtons, IonIcon, IonFabButton, IonList,
-  IonSelect, IonSelectOption, IonPopover
+  IonSelect, IonSelectOption, IonPopover, IonRippleEffect
 } from '@ionic/vue';
 import '@ionic/core/css/ionic.bundle.css'
 
@@ -33,6 +33,7 @@ app.component("IonList", IonList)
 app.component("IonSelect", IonSelect)
 app.component("IonSelectOption", IonSelectOption)
 app.component("IonPopover", IonPopover)
+app.component("IonRippleEffect", IonRippleEffect)
 
 app.mount('#app');
 

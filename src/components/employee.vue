@@ -1,5 +1,7 @@
 <template>
-  <div class="parent">
+  <ion-col
+    :routerLink="'/presences/'+item.nom"
+    class="parent ion-activatable ripple-parent">
     <div>
       <ion-icon
         class="icon"
@@ -10,18 +12,21 @@
       <div>{{ item.prenom }}</div>
       <div>No. Matricule {{ item.matricule }}, {{ item.niveau.nom }}</div>
     </div>
-    <div>
+    <div class="buttons">
       <ion-button
+        @click.stop
         fill=clear>
         <ion-icon :src="getIcon('checkmarkOutline')"/>
       </ion-button>
       <ion-button
+        @click.stop
         color=danger
         fill=clear>
         <ion-icon :src="getIcon('closeCircleOutline')"/>
       </ion-button>
     </div>
-  </div>
+    <ion-ripple-effect></ion-ripple-effect>
+  </ion-col>
 </template>
 
 <script>
