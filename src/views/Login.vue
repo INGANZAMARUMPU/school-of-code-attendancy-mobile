@@ -25,6 +25,8 @@
 </template>
 
 <script>
+import axios from "axios"
+
 export default {
   data(){
     return {
@@ -38,7 +40,14 @@ export default {
         username: this.username,
         password: this.password
       }
-      this.$store.state.user = logins
+      console.log("network request")
+      
+      axios.post(this.$store.state.base_url+"/login/", logins)
+      .then((response) => {
+        console.log(response)
+      }).catch((error) => {
+        console.log(error)
+      })
     }
   }
 }

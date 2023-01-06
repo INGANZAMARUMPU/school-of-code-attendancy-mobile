@@ -12,10 +12,6 @@
 
 <script>
 export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
-  },
   methods:{
     isPresent(){
       let bool = Math.random()*10 > 5
