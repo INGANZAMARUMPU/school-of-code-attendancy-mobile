@@ -49,17 +49,7 @@ export default {
   data(){
     return {
       niveaux_shown:false,
-      employees:[
-        {
-          "nom": "NKURUNZIZA",
-          "prenom": "Jonathan",
-          "matricule": "96",
-          "niveau": {
-              "nom": "BAC III",
-              "poid": 10
-          }
-        }
-      ]
+      employees:[]
     }
   },
   methods:{
@@ -68,7 +58,23 @@ export default {
     },
     logOut(){
       this.$store.state.user = null
+    },
+    fetchData(){
+      let headers = {
+        headers:{
+          Authorization: "Bearer "+this.$store.state.user.access
+        }
+      }
+      axios.get(this.$store.state.base_url+"/employee/", headers)
+      .then((response) => {
+        this.employees = response.data.results
+      }).catch((error) => {
+        console.error(error);
+      })
     }
+  },
+  mounted(){
+    this.fetchData()
   }
 }
 </script>

@@ -25,7 +25,6 @@
 </template>
 
 <script>
-import axios from "axios"
 
 export default {
   data(){
@@ -44,9 +43,9 @@ export default {
       
       axios.post(this.$store.state.base_url+"/login/", logins)
       .then((response) => {
-        console.log(response)
+        this.$store.state.user = response.data
       }).catch((error) => {
-        console.log(error)
+        console.log("-----------", error)
       })
     }
   }

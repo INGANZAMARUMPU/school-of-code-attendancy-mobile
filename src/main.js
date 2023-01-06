@@ -11,6 +11,7 @@ import {
 import '@ionic/core/css/ionic.bundle.css'
 
 import * as allIcons from "ionicons/icons";
+import axios from "axios"
 
 const app = createApp(App).use(IonicVue).use(router).use(store);
 
@@ -44,3 +45,5 @@ app.mixin({
     }
   }
 })
+
+window.axios = axios
