@@ -7,7 +7,15 @@
 <script>
 import Login from "./views/Login"
 export default {
-  components:{ Login }
+  components:{ Login },
+  watch:{
+    "$store.state.user"(new_val){
+      window.localStorage["rh_user"] = JSON.stringify(new_val)
+    }
+  },
+  mounted(){
+    this.$store.state.user = JSON.parse(window.localStorage["rh_user"])
+  }
 }
 </script>
 <style src="./style.css">

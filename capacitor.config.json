@@ -1,0 +1,6 @@
+{
+  "appId": "bi.hogi.attendancy",
+  "appName": "Attendancy App",
+  "webDir": "public",
+  "bundledWebRuntime": false
+}
